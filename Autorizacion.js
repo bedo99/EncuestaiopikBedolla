@@ -7,7 +7,7 @@ entrarGoogle = () => {
             var token = result.credential.accessToken;
             $('#ModalCenter').modal('hide');
             var user = result.user;
-            console.log(token, user.displayName,user.email);
+            console.log(token, user.displayName,user.email,user.provider);
 
         }).catch(function(error) {
             console.log(error);
