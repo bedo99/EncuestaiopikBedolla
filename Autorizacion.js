@@ -5,8 +5,9 @@ entrarGoogle = () => {
     firebase.auth().signInWithPopup(provider).then(function(result) {
 
             var token = result.credential.accessToken;
-            console.log(token);
             $('#ModalCenter').modal('hide');
+            var user = result.user;
+            console.log(token, user.displayName,user.email);
 
         }).catch(function(error) {
             console.log(error);
@@ -21,8 +22,9 @@ entrarFacebook = () => {
     firebase.auth().signInWithPopup(provider).then(function(result) {
 
             var token = result.credential.accessToken;
-            console.log(token);
             $('#ModalCenter').modal('hide');
+            var user = result.user;
+            console.log(token, user.displayName,user.email);
 
         }).catch(function(error) {
             console.log(error);
